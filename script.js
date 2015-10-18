@@ -25,7 +25,7 @@ function imageSearch(){
 
   var my_key = 'AIzaSyBdeOzPYln1iX1B4lJrgeBFbrqzsx8Cj2A';
 
-  var query = "https://www.googleapis.com/customsearch/v1?key=" + my_key + "&searchType=image" + "&cx=017113430126644414771:wwhvz3sxr2q" + "&q=" + searchTerm  + "&num=10&start=1&imgSize=large";
+  var query = "https://www.googleapis.com/customsearch/v1?key=" + my_key + "&searchType=image" + "&cx=017113430126644414771:wwhvz3sxr2q" + "&q=" + searchTerm  + "&num=12&start=1&imgSize=large";
   var url = encodeURI(query); //encode url if you get multiple search terms
 
   loadJSON(url, gotData);
