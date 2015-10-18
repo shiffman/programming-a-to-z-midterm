@@ -4,6 +4,7 @@ var bttn;
 var searchTerm;
 
 var startNum = 1; //keeps track of where we are starting so we can make multiple API calls
+var searchResults = []; //array that stores all of our search results as objects when we make multiple API calls 
 
 var allURLS = []; //create an empty array that will hold all the image URLs
 
@@ -29,12 +30,13 @@ function imageSearch(){
 
   var my_key = 'AIzaSyBdeOzPYln1iX1B4lJrgeBFbrqzsx8Cj2A';
 
+
   
   //we need to make 10 different API calls (to get 100 images)
   //this loop will first make us 10 different urls and then call loadJSON 10 times
   //startNum will increment by 10 each time
 
-  for (var i=0; i<10; i++) { 
+  for (var i=0; i<1; i++) { 
     var query = "https://www.googleapis.com/customsearch/v1?key=" + my_key + "&searchType=image&imgSize=large&imgType=photo" +  "&cx=017113430126644414771:wwhvz3sxr2q" + "&q=" + searchTerm  + "&num=10&start=" + startNum + "&imgSize=large";
     var url = encodeURI(query); //encode url if you get multiple search terms
     // console.log(url);
@@ -52,21 +54,23 @@ function imageSearch(){
 
 function gotData(data){
 
-  var imgInfo = data.items; //imgInfo array of objects -- each image is an object with metadata
+  console.log(data.items);
 
-  //for every image, grab the link from the object print out all the links
-  for (var i = 0; i < imgInfo.length; i++) {
+  // var imgInfo = data.items; //imgInfo array of objects -- each image is an object with metadata
 
-     var imgURL = imgInfo[i].link; //create a variable to hold the image URL
+  // //for every image, grab the link from the object print out all the links
+  // for (var i = 0; i < imgInfo.length; i++) {
 
-     createP(imgURL);
-     var imgThumbnail = createImg(imgURL);
-     imgThumbnail.size(100,100);
+  //    var imgURL = imgInfo[i].link; //create a variable to hold the image URL
 
-     allURLS.push(imgURL);  //store all the URLs in that array
-  }
+  //    createP(imgURL);
+  //    var imgThumbnail = createImg(imgURL);
+  //    imgThumbnail.size(100,100);
+
+  //    allURLS.push(imgURL);  //store all the URLs in that array
+  // }
   
-  console.log(allURLS);
+  // console.log(allURLS);
 
 
 }
