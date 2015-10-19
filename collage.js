@@ -9,10 +9,11 @@ function setup() {
   background(0);
 
   for (var i =0; i<imgURLS.length; i++) {
-    loadImage(imgURLS[i], imageCollage);
+    loadImage(imgURLS[0], imageCollage);
   }
 
-  copy(imgURLS[0], 7, 22, 10, 10, 35, 25, 50, 50);
+
+  // var section
 
   // slider = createSlider(0,20,10);
   // slider.position(100,100);
@@ -23,7 +24,10 @@ function setup() {
 
 function imageCollage(img){
 
-  image(img,0,0, 200, 200);
+  image(imgURLS[0],0,0);
+  // var c = get(50, 90, 50, 50);
+  // fill(c);
+  // image(img,0,0, 200, 200);
 
 }
 
