@@ -15,7 +15,11 @@ function setup() {
 function created() {
   graphics = createGraphics(imgElt.width, imgElt.height);
   graphics.image(imgElt, 0, 0, graphics.width, graphics.height);
-  mycopy(graphics, 0, 0, 100, 100, 100, 100, 100, 100);
+
+  var slice = graphics.get(0, 0, 100, 100);
+  image(slice, 100, 100);
+
+  //mycopy(graphics, 0, 0, 100, 100, 100, 100, 100, 100);
 }
 
 function mycopy(s, sx, sy, sw, sh, dx, dy, dw, dh) {
