@@ -2,7 +2,7 @@ var c;
 var slider;
 var imgSize;
 
-var imgURLS = ['https://upload.wikimedia.org/wikipedia/commons/5/58/Sunset_2007-1.jpg','https://upload.wikimedia.org/wikipedia/commons/9/90/Sunset_Marina.JPG','http://weknowyourdreams.com/images/sunset/sunset-02.jpg'];
+
 
 function setup() {
   c = createCanvas(windowWidth,windowHeight);
