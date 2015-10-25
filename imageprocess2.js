@@ -17,6 +17,7 @@ function preload(){
     
 }
 
+var canvas;
 
 function setup() {
 
@@ -27,7 +28,7 @@ function setup() {
   rowNum = h/tileSize;
 
 
-  var canvas = createCanvas(w,h); //onscreen canvas
+  canvas = createCanvas(w,h); //onscreen canvas
   canvas.position(20, 20); 
   devicePixelScaling(false);
   background(215);
