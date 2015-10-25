@@ -73,7 +73,7 @@ function setup() {
 
 function processImage(imgElt, x, y) {
 
-  function makeTile(){
+  //function makeTile(){
     //for every image in the array of image DOM elements
     //first we draw the image to an offscreen canvas
     
@@ -86,7 +86,7 @@ function processImage(imgElt, x, y) {
     mycopy(graphics, x, y, tileSize, tileSize, x, y, tileSize, tileSize);
 
 
-   }
+   //}
 
 }
 
