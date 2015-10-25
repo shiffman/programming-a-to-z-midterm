@@ -78,7 +78,7 @@ function processImage(imgElt, x, y) {
     //first we draw the image to an offscreen canvas
     
     var graphics = createGraphics(w, h); //draw the graphics canvas at the same dimensions as the canvas in the browser so they mirror each other
-    graphics.image(imgElt.elt, 0, 0, graphics.width, graphics.height);
+    graphics.image(imgElt, 0, 0, graphics.width, graphics.height);
     console.log(imgElt);
 
     x = x*tileSize; //take a tile and assign it to a place in the canvas in our browser
